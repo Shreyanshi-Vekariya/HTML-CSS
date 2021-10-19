@@ -1,0 +1,40 @@
+
+.login{
+    width: 500px;
+    height: 150px;
+    overflow: hidden;
+    margin: 200px;
+    padding: 50px;
+    background-color:cadetblue;
+    color:black;
+    font-family:Cambria;
+}
+#l1{
+    
+    
+    
+  border-radius: 5px 5px 0 0;
+  color:black;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: darkgray;
+    
+}
+input{
+    height: 70%;
+    width: 100%;
+    
+    
+    font-size: 16px;
+    
+  }
+  button a{
+      text-decoration: none;
+      font-size: 20px;
+      background-color: darkgray;
+      
+      
+  }
