@@ -37,4 +37,8 @@ input{
       background-color: darkgray;
       
       
+      
   }
+button:hover{
+  background-color: blue;
+}
