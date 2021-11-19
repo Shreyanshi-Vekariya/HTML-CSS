@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+    <title>College Form</title>
+</head>
+
+<body>
+    <p id="try"></p>
+    <div clss="container">
+        <div class="row text-center text-danger">
+            <div class="col">
+                <img src="uni_logo.png" alt="">
+            </div>
+            <div class="col">
+                <h4>Online Admission Form</h4>
+                <h4>2021-22</h4>
+            </div>
+            <div class="col">
+                <h5>Call Us : 1800-120-5616</h5>
+                <h5>Mail to : admission@jeccrcu.edu.in</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <form  action="#" onsubmit="return validation()">
+            <div class="row">
+                <h4 class="text-light bg-danger">Personal Details : -</Details>
+                </h4>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="application" class="form-check-label">Application No.</label><br>
+                        <input type="text" class="form-control" name="anum" id="anum" placeholder="Application No." autocomplete="off">
+                        <span id="aid" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactno" class="form-check-label">Contact Number</label><br>
+                        <input type="text" class="form-control" id="cnum" placeholder="Enter Contact No." autocomplete="off" >
+                        <span id="connum" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="adhar" class="form-check-label">Adhar Number</label><br>
+                        <input type="text" class="form-control" id="adharnum" placeholder="Enter Adhar Number" autocomplete="off">
+                        <span id="adhar" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="category" class="form-check-label">Category</label><br>
+                          <select class="form-select" id="category" aria-label="Default select example">
+                            <option selected="" value="Default">Select Catgory</option>
+                            <option value="1">General</option>
+                            <option value="2">OBC Creamy Layer</option>
+                            <option value="3">OBC Non-Creamy Layer(Only for Rajasthan Domicile)</option>
+                            <option value="4">SC</option>
+                            <option value="5">ST</option>
+                        </select>
+                        <span id="cat" class="text-danger"></span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="stuname" class="form-check-label">Student Name</label><br>
+                        <input type="text" class="form-control" id="stuname" placeholder="Enter Full Name">
+                        <span id="studentname" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob" class="form-check-label">Date of Birth</label><br>
+                        <input type="date" class="form-control" name="bdate" id="bdate">
+                        <span id="dob" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="application" class="form-check-label">Father's Name</label><br>
+                        <input type="text" class="form-control" id="faname" placeholder="Enter Father's Name" >
+                        <span id="fathername" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="category" class="form-check-label">Religion</label><br>
+                        <select class="form-select" id = "Religion" aria-label="Default select example">
+                            <option selected="" value = "Default" >----Select----</option>
+                            <option value="1">Hindu</option>
+                            <option value="2">Muslim</option>
+                            <option value="3">Sikh</option>
+                            <option value="4">Christian</option>
+                            <option value="5">Other</option>
+                        </select>
+                        <span id="reg" class="text-danger"></span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="email" class="form-check-label">Email</label><br>
+                        <input type="text" class="form-control" id="email">
+                        <span id="mail" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="application" class="form-check-label">Gender</label><br>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Male
+                        </label>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Female
+                        </label>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Other
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="mname" class="form-check-label">Mother's Name</label><br>
+                        <input type="text" class="form-control" id="mname" placeholder="Enter Mother's Name">
+                        <span id="mothername" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Nationality" class="form-check-label">Nationality</label><br>
+                        <input type="text" class="form-control" id="nat" placeholder="Nationality" >
+                        <span id="nationality" class="text-danger"></span>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="row p-2">
+                <h4 class="text-light bg-danger">Address Details : -</Details>
+                </h4>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="address" class="form-check-label">Address</label><br>
+                        <input type="text" class="form-control" id="address" placeholder="Enter Address">
+                        <span id="add" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="city" class="form-check-label">City</label><br>
+                        <input type="text" class="form-control" id="city" placeholder="Enter City" >
+                        <span id="cities" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="category" class="form-check-label">State</label><br>
+                        <select class="form-select" id = "state" aria-label="Default select example">
+                            <option selected = "" value = "Default">----Select----</option>
+                            <option value="1">Gujarat</option>
+                            <option value="2">Rajasthan</option>
+                            <option value="3">Maharashtra</option>
+                            <option value="4">Madhya Pradesh</option>
+                            <option value="5">Uttar Pradesh</option>
+                        </select>
+                        <span id="states" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Pincode" class="form-check-label">Pincode</label><br>
+                        <input type="text" class="form-control" id="pin" placeholder="Enter Pincode" >
+                        <span id="pincode" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row p-2">
+                <h4 class="text-light bg-danger">Course Details : -</Details>
+                </h4>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="category" class="form-check-label">State</label><br>
+                        <select class="form-select" id = "cdetail" aria-label="Default select example">
+                            <option selected = "" value = "Default">----Select----</option>
+                            <option value="1">UG</option>
+                            <option value="2">PG</option>
+                            
+                        </select>
+                        <span id="course" class="text-danger"></span>
+                    </div>
+                    
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="category" id = "prg"class="form-check-label">Programme</label><br>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected></option>
+                            
+                            
+                        </select>
+                        <span id="Programme" class="text-danger"></span>
+                    </div>
+                    
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="address" id = "spec" class="form-check-label">Specialization</label><br>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>--select--</option>
+                            
+                            
+                        </select>
+                        <span id="spec" class="text-danger"></span>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="row p-2">
+                <h4 class="text-light bg-danger">Education Details : -</Details>
+                </h4>
+                <div class="col-md-2">
+                    <div class="text-center">
+                        <br>10<sup>th</sup>   
+                    </div>
+                    
+                    <div>
+                        <div class="text-center"><br><br>
+                            <br>12<sup>th</sup>   
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="text-center"><br>
+                            <br>UG  
+                        </div>
+                        
+                            
+                    </div>
+                    
+                        
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="category" class="form-check-label">Status</label><br>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Passed</option>
+                            
+                        </select>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label for="category" class="form-check-label">Status</label><br>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Passed</option>
+                            
+                        </select>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="category" class="form-check-label">Status</label><br>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Passed</option>
+                            <option selected>Pursuing</option>
+                            
+                        </select>
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="Pincode" class="form-check-label">Board</label><br>
+                        <input type="text" class="form-control" id="board1"  >
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label for="Pincode" class="form-check-label">Board</label><br>
+                        <input type="text" class="form-control" id="board2" >
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="Pincode" class="form-check-label">University</label><br>
+                        <input type="text" class="form-control" id="uni"  >
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="Pincode" class="form-check-label">Percntage</label><br>
+                        <input name="abc" maxlength="100" type="number" step="any" max="100" min="45" class="form-control" id="pr1" >
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label for="Pincode" class="form-check-label">Percentage</label><br>
+                        <input name="abc" maxlength="100" type="number" step="any" max="100" min="45" class="form-control" id="pr2" >
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="Pincode" class="form-check-label">Percentage</label><br>
+                        <input name="abc" maxlength="100" type="number" step="any" max="100" min="45" class="form-control" id="pr3" >
+                        
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="Pincode" class="form-check-label">Year</label><br>
+                        <input name="abc" maxlength="2021" type="number" step="any" max="2021" min="1950" class="form-control" id="year1" >
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label for="Pincode" class="form-check-label">Year</label><br>
+                        <input name="abc" maxlength="2021" type="number" step="any" max="2021" min="1950" class="form-control" id="year2" >
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="Pincode" class="form-check-label">Year</label><br>
+                        <input name="abc" maxlength="2021" type="number" step="any" max="2021" min="1950" class="form-control" id="year3" >
+                        
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="Pincode" class="form-check-label">Subjects</label><br>
+                        <input type="text" class="form-control" id="sub1" placeholder="All" >
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label for="Pincode" class="form-check-label">Subjects</label><br>
+                        <input type="text" class="form-control" id="sub2" placeholder="All" >
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="Pincode" class="form-check-label">Subjects/Courses</label><br>
+                        <input type="text" class="form-control" id="sub3" placeholder="All" >
+                        
+                    </div>
+                </div>
+                
+                
+            
+
+            </div>
+
+            <button type="submit" class="btn btn-danger mt-3" name="submit" >Procced To Payment</button>
+        
+
+        </form>
+
+       
+
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
