@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Binding</title>
+</head>
+
+<body>
+    <header>
+        <h1>Vue Events</h1>
+    </header>
+    <section id="user">
+        <h2>Events In Action</h2>
+        <!-- <button v-on:click="counter++">Add</button>
+        <button v-on:click="counter--">Reduce</button> -->
+        <button @click="add(5)">Add</button>
+        <button v-on:click.right="reduce(5)">Reduce</button>
+        <p>Result : {{counter}}</p>
+        <!-- <input type="text" v-bind:value="name" v-on:input="setName"> use v=model instate of this-->
+        <input type="text" v-model="name">
+        <input type="text" v-model="lastname">
+        <p>your name : {{fullName}}</p>
+        <button v-on:click="resetName">Reset Value</button>
+        <form v-on:submit.prevent="submitForm">
+            <input type="text">
+            <button>Submit</button>
+        </form>
+    </section>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
